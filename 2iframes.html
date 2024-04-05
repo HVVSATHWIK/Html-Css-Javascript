@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframes</title>
+    <style>
+        
+        body {
+            background-color: #1a1a1a;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        
+        #amazonFrame {
+            display: block;
+            margin: 20px auto;
+            background-color: #333;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        
+        #leftFrameContainer {
+            float: left;
+            width: 30%;
+            height: calc(100% - 60px); 
+            padding: 20px;
+        }
+
+        
+        #rightFrameContainer {
+            float: right;
+            width: 70%;
+            height: calc(100% - 60px); 
+            padding: 20px;
+        }
+
+        
+        #footerFrameContainer {
+            clear: both;
+            width: 100%;
+            height: 40px;
+            text-align: center;
+            background-color: #333;
+        }
+
+        
+        #footerFrameContent {
+            line-height: 40px;
+        }
+
+        
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center; 
+        }
+        ul li a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #4CAF50; 
+            border-radius: 5px;
+            flex-grow: 1; 
+        }
+        ul li p {
+            margin: 0;
+            padding-left: 10px; 
+            font-size: 14px;
+            color: #ccc; 
+        }
+
+        ul li a:hover {
+            background-color: #45a049; 
+        }
+
+        
+        #scrollingBar {
+            width: 100%;
+            height: 30px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="scrollingBar">
+        <marquee behavior="scroll" direction="left">
+            Biggest Indian festival of India is here with 90% discount. Don't miss the chance!!!
+        </marquee>
+    </div>
+
+    
+    <iframe id="amazonFrame" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Amazon.com-Logo.svg/220px-Amazon.com-Logo.svg.png" width="220" height="70" frameborder="0"></iframe>
+
+    
+    <div id="leftFrameContainer">
+        <ul>
+            <li>
+                <a href="https://www.oneplus.in/" target="rightFrame">OnePlus</a>
+                <p>OnePlus is known for its high-performance smartphones.</p>
+            </li>
+            <li>
+                <a href="https://www.vivo.com/in/products/v30-pro" target="rightFrame">Vivo</a>
+                <p>Vivo offers innovative features in its smartphones.</p>
+            </li>
+            <li>
+                <a href="https://www.motorola.com/us/smartphones-motorola-razr-2023-all" target="rightFrame">Motorola</a>
+                <p>Motorola combines style with performance in its smartphones.</p>
+            </li>
+        </ul>
+    </div>
+
+    
+    <div id="rightFrameContainer">
+        <iframe name="rightFrame" width="100%" height="500px" frameborder="6"></iframe>
+    </div>
+
+    
+    <div id="footerFrameContainer">
+        <iframe id="footerFrameContent" width="100%" height="100%" frameborder="0" srcdoc="<p>&copy; 2024 All rights reserved</p>"></iframe>
+    </div>
+</body>
+</html>
